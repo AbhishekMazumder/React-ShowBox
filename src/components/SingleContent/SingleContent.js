@@ -15,7 +15,7 @@ const SingleContent = ({ id, title, poster, date, ratings, media_type }) => {
 			/>
 			<b className="title">{title}</b>
 			<span className="subTitle">
-				{media_type === 'tv' ? 'Series' : 'Movies'}
+				{media_type === 'tv' ? 'Series' : 'Movie'}
 				<spa className="subTitle">{date}</spa>
 			</span>
 		</div>
