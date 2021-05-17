@@ -4,8 +4,8 @@
 	position: fixed;
 	display: flex;
 	justify-content: center;
-	
-	background-color: #39445a;
+	background-color: #2d313a;
+	/* background-color: #39445a; */
 	font-family: 'Girassol', sans-serif;
 	font-size: 3rem;
 	padding: 10px 0px;
@@ -16,7 +16,7 @@
 
 @media (max-width: 1000px) {
   .header {
-    padding-top: 15px;
+    
     font-size: 6.4vw;
   }
 }

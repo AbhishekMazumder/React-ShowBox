@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
@@ -7,6 +7,12 @@ import MovieIcon from '@material-ui/icons/Movie';
 import TvIcon from '@material-ui/icons/Tv';
 import SearchIcon from '@material-ui/icons/Search';
 import { useHistory } from 'react-router-dom';
+
+const naviTheme = createMuiTheme({
+	palette: {
+		type: 'dark',
+	},
+});
 
 const useStyles = makeStyles({
 	root: {
@@ -37,34 +43,20 @@ export default function SimpleBottomNavigation() {
 	}, [value, history]);
 
 	return (
-		<BottomNavigation
-			value={value}
-			onChange={(event, newValue) => {
-				setValue(newValue);
-			}}
-			showLabels
-			className={classes.root}
-		>
-			<BottomNavigationAction
-				style={{ color: '#fff' }}
-				label="Trending"
-				icon={<WhatshotIcon />}
-			/>
-			<BottomNavigationAction
-				style={{ color: '#fff' }}
-				label="Movies"
-				icon={<MovieIcon />}
-			/>
-			<BottomNavigationAction
-				style={{ color: '#fff' }}
-				label="Series"
-				icon={<TvIcon />}
-			/>
-			<BottomNavigationAction
-				style={{ color: '#fff' }}
-				label="Search"
-				icon={<SearchIcon />}
-			/>
-		</BottomNavigation>
+		<ThemeProvider theme={naviTheme}>
+			<BottomNavigation
+				value={value}
+				onChange={(event, newValue) => {
+					setValue(newValue);
+				}}
+				showLabels
+				className={classes.root}
+			>
+				<BottomNavigationAction label="Trending" icon={<WhatshotIcon />} />
+				<BottomNavigationAction label="Movies" icon={<MovieIcon />} />
+				<BottomNavigationAction label="Series" icon={<TvIcon />} />
+				<BottomNavigationAction label="Search" icon={<SearchIcon />} />
+			</BottomNavigation>
+		</ThemeProvider>
 	);
 }
