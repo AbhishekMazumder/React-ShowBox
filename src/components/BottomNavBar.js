@@ -20,6 +20,7 @@ const useStyles = makeStyles({
 		position: 'fixed',
 		bottom: 0,
 		left: 0,
+		fontWeight:"bold",
 		backgroundColor: '#2d313a',
 		zIndex: 100,
 	},

@@ -1,36 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 
 * {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 .app {
-  min-height: 100vh;
-  background-color: #1b1c22;
-  color: white;
-  padding-top: 130px;
-  padding-bottom: 70px;
+	min-height: 100vh;
+	background-color: #1b1c22;
+	color: white;
+	padding-top: 130px;
+	padding-bottom: 70px;
 }
 
 @media (max-width: 700px) {
-  .app {
-    padding-top: 70px;
-  }
+	.app {
+		padding-top: 70px;
+	}
 }
 
 .page-title {
-  text-transform: uppercase;
-  display: flex;
-  justify-content: start;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2vw;
-  padding: 10px 6px 10px 15px;
-  border-radius: 50px;
-  color: white;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: start;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 2vw;
+	padding: 10px 6px 10px 15px;
+	border-radius: 50px;
+	color: white;
 }
 
 @media (max-width: 1000px) {
-  .page-title {
-    font-size: 4.6vw;
-  }
+	.page-title {
+		font-size: 4.6vw;
+	}
 }
+
+

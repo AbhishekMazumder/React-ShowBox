@@ -3,10 +3,11 @@ import { img_300 } from '../../config/config';
 import noPoster from '../../images/no-poster.jpg';
 import './singleContent.css';
 import { Badge } from '@material-ui/core';
+import ContentModal from '../ContentModal/ContentModal';
 
 const SingleContent = ({ id, title, poster, date, ratings, media_type }) => {
 	return (
-		<div className="media">
+		<ContentModal media_type={media_type} id={id}>
 			<Badge badgeContent={ratings} color="primary" />
 			<img
 				className="poster"
@@ -18,7 +19,7 @@ const SingleContent = ({ id, title, poster, date, ratings, media_type }) => {
 				{media_type === 'tv' ? 'Series' : 'Movie'}
 				<spa className="subTitle">{date}</spa>
 			</span>
-		</div>
+		</ContentModal>
 	);
 };
 
